@@ -38,7 +38,13 @@ public class UserController {
     @GetMapping("/findUser/{id}")
     public Optional<User> findUserById(@PathVariable int id){
         LOGGER.info("Request for /findUserById had id as {}", id);
+        System.out.println("Request for /findUserById had id as " + id);
         return userService.findUserById(id);
+    }
+
+    @GetMapping("/checkLoadBalancerWorking")
+    public String checkLoadBalancerWorking(){
+        return "From app instance 2";
     }
 
 
