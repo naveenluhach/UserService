@@ -32,6 +32,7 @@ public class UserController {
     public Integer createNewUser(@RequestBody User newUser){
          LOGGER.info("Request for /create had User object with name as {}", newUser.getName());
          User user = userRepository.save(newUser);
+         //make an entry into the userauth table
          return user.getId();
     }
 

@@ -1,5 +1,5 @@
 server:
-  port: 8091    #default port where the service will be started
+  port: 8091   #default port where the service will be started
 
 eureka:         #tells about the Eureka server details and its refresh time
   instance:
